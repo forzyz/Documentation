@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <link rel="stylesheet" href="./css/styles.css"/> 
+  </head>
+
+  <body>
+    <nav id="navbar"> 
+      <header>JS DOCS</header> 
+      <ul> 
+        <li> 
+          <a class="nav-link" href="#Introduction">Introduction</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Standard_built-in_objects">Standard built-in objects</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Standard_objects_by_category">Standard objects by category</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Expressions">Expressions</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Statements_and_declarations">Statements and declarations</a>
+        </li>
+      </ul>
+    </nav>
+   <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
+        <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
+       <ul> 
+        <li>Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.</li>
+        <li>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</li>
+       </ul>
+      </article>
+    </section>
+    <section class="main-section" id="Standard_built-in_objects">
+      <header>Standard built-in objects</header>
+      <article> 
+        <p>This chapter documents all of JavaScript's standard, built-in objects, including their methods and properties.</p>
+
+<p>The term "global objects" (or standard built-in objects) here is not to be confused with the global object. Here, "global objects" refer to objects in the global scope.</p>
+
+<p>The global object itself can be accessed using the this operator in the global scope. In fact, the global scope consists of the properties of the global object, including inherited properties, if any.</p>
+
+<p>Other objects in the global scope are either created by the user script or provided by the host application. The host objects available in browser contexts are documented in the API reference.</p>
+      </article>
+    </section>
+    <section class="main-section" id="Standard_objects_by_category">
+      <header>Standard objects by category</header>
+      <article>
+        <ul>
+          <h1 class="font-normal">Value properties</h1>
+          <li>
+            <code class="li-header">globalThis.</code>
+            <p>The global globalThis property contains the global this value, which is usually akin to the global object.</p>
+          </li>
+          <li>
+            <code class="li-header">Infinity.</code> 
+            <p>The global property Infinity is a numeric value representing infinity.</p>
+          </li>
+          <li>
+            <code class="li-header">NaN.</code> 
+            <p>The global NaN property is a value representing Not-A-Number.</p>
+          </li>
+          <li>
+            <code class="li-header">undefined.</code> 
+            <p>The global undefined property represents the primitive value undefined. It is one of JavaScript's primitive types.</p>
+          </li>
+        </ul>
+        <ul>
+          <h1 class="font-normal">Function properties</h1>
+          <h2>These global functions—functions which are called globally, rather than on an object—directly return their results to the caller.</h2>
+          <li>
+            <code class="li-header">eval()</code>
+            <p>The <code>eval()</code> function evaluates JavaScript code represented as a string and returns its completion value. The source is parsed as a script.</p>
+          </li>
+          <li>
+            <code class="li-header">isFinite()</code>
+            <p>The global <code>isFinite()</code> function determines whether the passed value is a finite number. If needed, the parameter is first converted to a number.</p>
+          </li>
+          <li> 
+            <code class="li-header">isNaN()</code>
+            <p>The <code>isNaN()</code> function determines whether a value is NaN when converted to a number. Because coercion inside the isNaN() function can be surprising, you may alternatively want to use <code>Number.isNaN()</code>.</p>
+          </li>
+          <li>
+            <code class="li-header">parseFloat()</code>
+            <p>The <code>parseFloat()</code> function parses a string argument and returns a floating point number.</p>
+          </li>
+          <li> 
+            <code class="li-header">parseInt()</code>
+            <p>The <code>parseInt()</code> function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).</p>
+          </li>
+          <li> 
+            <code class="li-header">decodeURI()</code>
+            <p>The <code>decodeURI()</code> function decodes a Uniform Resource Identifier (URI) previously created by encodeURI() or a similar routine.</p>
+          </li>
+          <li>
+            <code class="li-header">decodeURIComponent()</code>
+            <p>The <code>decodeURIComponent()</code> function decodes a Uniform Resource Identifier (URI) component previously created by <p>encodeURIComponent()</p> or by a similar routine.</p>
+          </li>
+          <li>
+            <code class="li-header">encodeURI()</code>
+            <p>The <code>encodeURI()</code > function encodes a URI by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two surrogate characters). Compared to encodeURIComponent(), this function encodes fewer characters, preserving those that are part of the URI syntax.</p>
+          </li>
+          <li>
+            <code class="li-header">encodeURIComponent()</code>
+            <p>The <code>encodeURIComponent()</code> function encodes a URI by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two surrogate characters). Compared to <code>encodeURI()</code>, this function encodes more characters, including those that are part of the URI syntax.</p>
+          </li>
+        </ul>
+        <ul>
+          <h1 class="font-normal">Fundamental objects</h1>
+          <h2>These objects represent fundamental language constructs.</h2>
+          <li> 
+            <code class="li-header">Object</code>
+            <p>The <code>Object</code> type represents one of JavaScript's data types. It is used to store various keyed collections and more complex entities. <code>Objects</code> can be created using the <code>Object()</code> constructor or the object initializer / literal syntax.</p>
+          </li>
+          <li>
+            <code class="li-header">Function</code>
+            <p>The <code>Function</code> object provides methods for functions. In JavaScript, every function is actually a Function object.</p>
+          </li>
+          <li>
+            <code class="li-header">Boolean</code>
+            <p>The <code>Boolean</code> object represents a truth value: true or false.</p>
+          </li>
+          <li> 
+            <code class="li-header">Symbol</code>
+            <p><code>Symbol</code> is a built-in object whose constructor returns a symbol primitive — also called a <code>Symbol value</code> or just a <code>Symbol</code> — that's guaranteed to be unique. Symbols are often used to add unique property keys to an object that won't collide with keys any other code might add to the object, and which are hidden from any mechanisms other code will typically use to access the object. That enables a form of weak encapsulation, or a weak form of information hiding.</p>
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="Expressions">
+      <header>Expressions</header> 
+      <h2>This chapter documents all the JavaScript language operators, expressions and keywords.</h2>
+      <article>
+        <ul>
+          <li>
+            <code class="li-header">Primary expressions</code>
+            <p>Basic keywords and general expressions in JavaScript. These expressions have the highest precedence (higher than operators).</p>
+          </li>
+          <li>
+            <code class="li-header">Left-hand-side expressions</code>
+            <p>Left values are the destination of an assignment.</p>
+            </li>
+          <li>
+            <code class="li-header">Increment and decrement</code>
+            <p>Postfix/prefix increment and postfix/prefix decrement operators.</p>
+            </li>
+          <li>
+            <code class="li-header">Unary operators</code>
+            <p>A unary operation is an operation with only one operand.</p>
+          </li>
+          <li>
+            <code class="li-header">Arithmetic operators</code>
+            <p>Arithmetic operators take numerical values (either literals or variables) as their operands and return a single numerical value.</p>
+          </li>
+          <li>
+            <code class="li-header">Relational operators</code>
+            <p>A comparison operator compares its operands and returns a boolean value based on whether the comparison is true.</p>
+          </li>
+          <li>
+            <code class="li-header">Equality operators</code>
+            <p>The result of evaluating an equality operator is always of type boolean based on whether the comparison is true.</p>
+          </li>
+          <li>
+            <code class="li-header">Bitwise shift operators</code>
+            <p>Operations to shift all bits of the operand.</p>
+          </li>
+          <li>
+            <code class="li-header">Binary bitwise operators</code>
+            <p>Bitwise operators treat their operands as a set of 32 bits (zeros and ones) and return standard JavaScript numerical values.</p>
+          </li>
+          <li>
+            <code class="li-header">Binary logical operators</code>
+            <p>Logical operators implement boolean (logical) values and have short-circuiting behavior.</p>
+          </li>
+          <li>
+            <code class="li-header">Conditional (ternary) operator</code>
+            <p>The conditional operator returns one of two values based on the logical value of the condition.</p>
+            </li>
+          <li>
+            <code class="li-header">Assignment operators</code>
+            <p>An assignment operator assigns a value to its left operand based on the value of its right operand.</p>
+          </li>
+          <li>
+            <code class="li-header">Yield operators</code>
+            <p></p>
+            <code class="inside-operator">yield</code>
+            <h3>Pause and resume a generator function.</h3>
+            <code class="inside-operator">yield*</code></br>
+            <h3>Delegate to another generator function or iterable object.</h3>
+          </li>
+          <li>
+            <code class="li-header">Spread syntax</code>
+            <p></p>
+            <code>...obj</code></br>
+            <h3>Spread syntax allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.</h3>
+          </li>
+          <li>
+            <code class="li-header">Comma operator</code>
+            <p></p>
+            <code>,</code></br>
+            <h3>The comma operator allows multiple expressions to be evaluated in a single statement and returns the result of the last expression.</h3>
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="Statements_and_declarations">
+      <header>Statements and declarations</header>
+      <h2>JavaScript applications consist of statements with an appropriate syntax. A single statement may span multiple lines. Multiple statements may occur on a single line if each statement is separated by a semicolon. This isn't a keyword, but a group of keywords.</h2>
+      <article>
+        <ul>
+          <h1 class="font-normal">Control flow</h1>
+          <li>
+            <code class="li-header">return</code>
+            <p>Specifies the value to be returned by a function.</p>
+          </li>
+          <li>
+            <code class="li-header">break</code>
+            <p>Terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement.</p>
+          </li>
+          <li>
+            <code class="li-header">continue</code>
+            <p>Terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.</p>
+          </li>
+          <li>
+            <code class="li-header">throw</code>
+            <p>Throws a user-defined exception.</p>
+          </li>
+          <li>
+            <code class="li-header">if...else</code>
+            <p>Executes a statement if a specified condition is true. If the condition is false, another statement can be executed.</p>
+          </li>
+          <li>
+            <code class="li-header">switch</code>
+            <p>Evaluates an expression, matching the expression's value to a case clause, and executes statements associated with that case.</p>
+          </li>
+          <li>
+            <code class="li-header">try...catch</code>
+            <p>Marks a block of statements to try, and specifies a response, should an exception be thrown.</p>
+          </li>
+          <h1 class="font-normal">Declaring variables</h1>
+          <li>
+            <code class="li-header">var</code>
+            <p>Declares a variable, optionally initializing it to a value.</p>
+          </li>
+          <li>
+            <code class="li-header">let</code>
+            <p>Declares a block scope local variable, optionally initializing it to a value.</p>
+          </li>
+          <li>
+            <code class="li-header">const</code>
+            <p>Declares a read-only named constant.</p>
+          </li>
+          <h1 class="font-normal">Functions and classes</h1>
+          <li>
+            <code class="li-header">function</code>
+            <p>Declares a function with the specified parameters.</p>
+          </li>
+          <li>
+            <code class="li-header">function*</code>
+            <p>Generator Functions enable writing iterators more easily.</p>
+          </li>
+          <li>
+            <code class="li-header">async function</code>
+            <p>Declares an async function with the specified parameters.</p>
+          </li>
+          <li>
+            <code class="li-header">async function*</code>
+            <p>Asynchronous Generator Functions enable writing async iterators more easily.</p>
+          </li>
+          <li>
+            <code class="li-header">class</code>
+            <p>Declares a class.</p>
+          </li>
+          <h1 class="font-normal">Iterations</h1>
+          <li>
+            <code class="li-header">do...while</code>
+            <p>Creates a loop that executes a specified statement until the test condition evaluates to false. The condition is evaluated after executing the statement, resulting in the specified statement executing at least once.</p>
+          </li>
+          <li>
+            <code class="li-header">for</code>
+            <p>Creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement executed in the loop.</p>
+          </li>
+          <li>
+            <code class="li-header">for...in</code>
+            <p>Iterates over the enumerable properties of an object, in arbitrary order. For each distinct property, statements can be executed.</p>
+          </li>
+          <li>
+            <code class="li-header">for...of</code>
+            <p>Iterates over iterable objects (including arrays, array-like objects, iterators and generators), invoking a custom iteration hook with statements to be executed for the value of each distinct property.</p>
+          </li>
+          <li>
+            <code class="li-header">for await...of</code>
+            <p>Iterates over async iterable objects, array-like objects, iterators and generators, invoking a custom iteration hook with statements to be executed for the value of each distinct property.</p>
+          </li>
+          <li>
+            <code class="li-header">while</code>
+            <p>Creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated before executing the statement.</p>
+          </li>
+        </ul> 
+      </article>
+    </section>
+   </main>
+  </body>
+</html>
